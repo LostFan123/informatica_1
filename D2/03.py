@@ -13,6 +13,17 @@ t_d = t / 1440
 days_count = round(t_d)
 # ...and so on...
 
+# 3. Use meaningful names. Something like this is very difficult to understand:
+r = int(input("Number of minutes: "))
+l = 60 * 24
+p = 60
+di = int(r / l)
+rd = r % l
+h = int(rd / p)
+rh = rd % p
+m = rh
+print(str(di) + " days " + str(h) + " hours and " + str(m) + " minutes.")
+
 
 # Good solution
 total_minutes = int(input("Enter minutes: "))
