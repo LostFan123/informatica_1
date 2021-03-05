@@ -4,7 +4,7 @@ a = float(input("Number 1: "))
 op = input("Operation: ")
 b = float(input("Number 2: "))
 while a != 0 or op != '+' or b != 0:  # same as `while not (a == 0 and op == '+' and b == 0):`. See: https://en.wikipedia.org/wiki/De_Morgan%27s_laws
-    if op == '+':
+    if op == '+':  # `if '+' in op:` will check a presence of '+' character in the string `op`
         result = a + b
     elif op == '-':
         result = a - b
