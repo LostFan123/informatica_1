@@ -8,6 +8,21 @@ while divisor > 1:
     divisor -= 1
 print(f"{number} is prime")  # <- This will be executed always. Not what we want!
 
+# 2. Similar problem. We don't need to go over all possible divisors:
+number = int(input("Number: "))
+divisor = number - 1
+is_prime = True
+while divisor > 1:
+    if number % divisor == 0:
+        is_prime = False
+        #  print("We found that it's not a prime")
+    divisor -= 1
+    #  print(divisor)
+if is_prime:
+    print("Prime!")
+else:
+    print("Not prime!")
+
 # Possible solution. Using a **flag variable** to stop the loop.
 number = int(input("Number: "))
 divisor = 2
