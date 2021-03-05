@@ -1,4 +1,5 @@
 # Possible solution:
+# Note: we use `elif`s instead of `if`s as we don't need to check the inputted symbol against all possible valid symbols
 a = float(input("Number 1: "))
 op = input("Operation: ")
 b = float(input("Number 2: "))
