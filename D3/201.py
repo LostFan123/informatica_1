@@ -22,6 +22,22 @@ if is_prime:
     print("Prime!")
 else:
     print("Not prime!")
+    
+# 3. Setting the flag variable `is_prime` to `True` will give incorrect results.
+#    Failing example: 9
+number = int(input("N: "))
+divisor = number - 1
+is_prime = True
+while divisor > 1:
+	if number % divisor == 0:
+		is_prime = False
+	else:
+		is_prime = True
+	divisor = divisor - 1
+if is_prime:
+	print(f"{number} is a prime number.")
+else:
+	print(f"{number} is not a prime number.")
 
 # Possible solution. Using a **flag variable** to stop the loop.
 number = int(input("Number: "))
