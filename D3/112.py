@@ -103,3 +103,25 @@ while total != "0+0":
 	n2 = int(input("Enter another number: "))
 	total = str(n1) + op + str(n2) 
 # a simpler way to write this condtion will be `while (n1, op, n2) != (0, '+', 0):`
+
+# Note: `in` is used to check for an inclusion, `==` is used for equality comparison.
+# Here is where we *could* use `in`, though: 
+number1 = 1
+number2 = 1
+symbol = " "
+while not (number1 == 0 and number2 == 0 and symbol == '+'):
+    print("\n" + "Remember that if you want to go out of the bucle you have to enter the operation 0+0" + "\n")
+    number1 = int(input("Write a number: "))
+    number2 = int(input("Write a second number: "))
+    symbol = " "
+    while symbol != "+" and symbol != "-" and symbol != "*" and symbol != "/":  # while symbol not in "+-*/":
+        symbol = str(input("Enter a arithmetic operaction symbol (+,-,*,/): "))
+    if symbol == "+":
+        solution = number1+number2
+    elif symbol == "-":
+        solution = number1-number2
+    elif symbol == "*":
+        solution = number1*number2
+    else:
+        solution = number1/number2
+    print("The solution of " + str(number1) + str(symbol) + str(number2) + " is " + str(round(solution)))
