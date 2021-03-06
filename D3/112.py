@@ -24,6 +24,25 @@ while status:
     status = False if result == 0 and operation == '+' else True
 print('Done!')
 
+# Same problem. Failing examples: any where operation is not '+', or where any of the operands is zero.
+first = int(input("Introduce the first number:"))
+second = int(input("Introduce the second number:"))
+op = input("Introduce the operator:")
+while first != 0 and second != 0 and op == "+":
+    if op == "+":
+        result = first + second
+    elif op == "-":
+        result = first - second
+    elif op == "*":
+        result = first * second
+    elif op == "/":
+        result = first / second
+    print("The solutions is", result)
+    first = int(input("Introduce the first number:"))
+    second = int(input("Introduce the second number:"))
+    op = input("Introduce the character:")
+print("Done")
+
 # Possible solution:
 # Note: we use `elif`s instead of `if`s as we don't need to check the inputted symbol against all possible valid symbols
 a = float(input("Number 1: "))
