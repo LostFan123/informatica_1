@@ -15,6 +15,21 @@ if even_digits_count != 0:
 else:
     print("No digits are even.")
     
+# 2. Using not intended tools probably won't be accepted on exams...
+x = float(input("Enter a number ")) 
+if "1" in str(x):
+    print("Not all digits are even numbers")
+elif "3" in str(x):
+    print("Not all digits are even numbers")
+elif "5" in str(x):
+    print("Not all digits are even numbers")
+elif "7" in str(x):
+    print("Not all digits are even numbers")
+elif "9" in str(x):
+    print("Not all digits are even numbers")
+else:
+    print("All digits are even numbers")
+    
 # Possible solution:
 number = int(input("Number: "))
 all_digits_are_even = True
