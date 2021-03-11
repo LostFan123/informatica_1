@@ -11,3 +11,10 @@ for index in range(len(values)):
     if values[index] % 3 == 0:
         values[index] = 0
 print(values)
+
+# Same but using while-loop:
+index = 0
+while index < len(values):
+    if values[index] % 3 == 0:
+        values[index] = 0
+    index += 1
