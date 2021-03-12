@@ -13,6 +13,9 @@ v10 = input("Introduce a value:")
 V1 = [v1, v2, v3, v4, v5, v6, v7, v8, v8, v9, v10]
 print(V1)
 
+# 2. The following will read only one number and repeat it 10 times.
+values = 10 * [int(input('Enter value: '))]
+
 # Possible solution using while loop:
 values = [0] * 10
 index = 0
