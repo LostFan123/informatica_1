@@ -6,5 +6,8 @@ while counter < 10:
     counter = counter + 1
 print(numbers)
 
+# 2. Defining the list by writing every value is not the best approach:
+values = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
 # Solution:
 values = [0] * 10
