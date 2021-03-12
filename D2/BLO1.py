@@ -1,39 +1,21 @@
-# one should avoid duplicating logic:
-...
-if sex == 'M':
-    recommented_weight = 20 + 2 * training_months
-else:
-    recommented_weight = 20 + 1 * training_months
-# one of the solutions I received went through all possible combinations of age/sex
-# and for each combination also checked if the weight is greater than the max.
+# Task:
+# Write the code that asks the user age, sex and months of training and calculates the personal recommended weight of a gym exercise, such that: the minimum weight is 20 Kg, the maximum is 60 kg for older than 65 years or 80 kg otherwise, and the formula adds to the minimum: 2
+# kg for each month of training in case of men, and 1 kg per month for women.
+# EXAMPLE: For a 50 years old man with 16 months of training => the recommended weight is 52 kg
 
+# ------------------------------------------------------------------------------------------------
 # Possible solution:
-MIN_WEIGHT = 20
-AGE_LIMIT = 65
-MAX_WEIGHT_FOR_OLD = 60
-MAX_WEIGHT_FOR_YOUNG = 80
-WEIGHT_DELTA_M = 2
-WEIGHT_DELTA_F = 1
 age = int(input("Age: "))
 sex = input("Sex (M/F): ")
 training_months = int(input("Months of training: "))
-if age > AGE_LIMIT:
-    max_weight = MAX_WEIGHT_FOR_OLD
-else:
-    max_weight = MAX_WEIGHT_FOR_YOUNG
-if sex == 'M':
-    weight_delta = WEIGHT_DELTA_M
-else:
-    weight_delta = WEIGHT_DELTA_F
+max_weight = 60 if age > 65 else 80
+weight_delta = 2 if sex == 'M' else 1
 recommended_weight = MIN_WEIGHT + weight_delta * training_months
 if recommended_weight > max_weight:
     recommended_weight = max_weight
-print(f"Recommended weight is {recommended_weight}")    
+print(f"Recommended weight is {recommended_weight}")   
 
-# this can be shortened by using a so-called conditional expression:
-max_weight = MAX_WEIGHT_FOR_OLD if age > AGE_LIMIT else MAX_WEIGHT_FOR_YOUNG
-weight_delta = WEIGHT_DELTA_M if sex == 'M' else WEIGHT_DELTA_F
-# ... and using `min` built-in function:
+# or using a built-in `min` function:
 age = int(input("Age: "))
 sex = input("Sex (M/F): ")
 training_months = int(input("Months of training: "))
