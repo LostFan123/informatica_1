@@ -28,6 +28,25 @@ print("YES" if number % 15 == 0 else "NO")
 # Advanced solution:
 #   `if` can actually accept not only boolean values (`True` and `False`), but any values at all.
 #   See Python docs on truth value testing: https://docs.python.org/3/library/stdtypes.html#truth-value-testing
-#   0 or 0.0 will be considered by `if` as `False`, and any other numbers will be considered as `True`.
+#   0 or 0.0 will be considered by `if` as `False`, and any other number will be considered as `True`.
 number = int(input("Enter a number: "))
 print("NO" if number % 15 else "YES")
+
+
+# ------------------------------------------------------------------------------------------------
+
+# Common mistakes:
+# 1. Writing the code that makes sense in English language, but doesn't make sense in terms of logic of programming language
+#    Failing example: 15
+number = int(input("Enter a number: "))
+if number % 3 and 5 == 0:
+    print("YES")
+else:
+    print("NO")
+# Reason: Python follows the precedence table when evaluating the result of an expression.
+#   It is similar to the precedence order that we have in math.
+#   See: https://docs.python.org/3/reference/expressions.html#operator-precedence
+#   Python will evaluate the `number % 3 and 5 == 0` line in the following order:
+#   1) `number % 3` (let's denote the result of this operation as A)
+#   2) `5 == 0` which will always give `False`
+#   3) `A and False` - this will always give `False`. See: https://en.wikipedia.org/wiki/Boolean_algebra#Operations
