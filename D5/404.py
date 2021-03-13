@@ -1,8 +1,9 @@
-# 1. This is how it is actually done in real life, but, most probably, won't be accepted on the exams:
-text = str(input("Write a sentence: "))
-print(text.count(' '))
+# Task:
+#   Count the space characters (' ') of a sentence contained in vector S. For instance, S=”This
+#   exercises should give a result of 9 white spaces”
 
-# Most probably, you will be asked to solve this task using loops.
+
+# ------------------------------------------------------------------------------------------------
 # Possible solution using a while loop:
 text = str(input("Write a sentence: "))
 index = 0
@@ -19,3 +20,9 @@ for character in text:
     if character == ' ':
         spaces_count += 1
 print(spaces_count)
+
+# ------------------------------------------------------------------------------------------------
+# Advanced solution.
+# Strings have a special `count` method for this task. This won't be accepted on the exams, though!
+text = str(input("Write a sentence: "))
+print(text.count(' '))
