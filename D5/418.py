@@ -17,6 +17,21 @@ else:
     print("Not a palindrome")
     
 # ------------------------------------------------------------------------------------------------
+# Common mistake:
+# 1. Constructing new string containing the reversed string is not optimal memory-wise.
+#    Probably, also won't be accepted on the exam as a "dyamically growing array".
+text = input("Enter text: ")
+index = len(text) - 1
+reversed_text = ""
+while index >= 0:
+    reversed_text += text[index]
+    index -= 1
+if reversed_text == text:
+    print("Palindrome")
+else:
+    print("Not a palindrome")    
+
+# ------------------------------------------------------------------------------------------------
 # Advanced solutions:
 # Using a for-else loop construct with `break` statement
 text = input("Enter text: ")
@@ -34,17 +49,3 @@ if text == text[::-1]:
 else:
     print("Not a palindrome")
     
-# ------------------------------------------------------------------------------------------------
-# Common mistake:
-# 1. Constructing new string containing the reversed string is not optimal memory-wise.
-#    Probably, also won't be accepted on the exam as a "dyamically growing array".
-text = input("Enter text: ")
-index = len(text) - 1
-reversed_text = ""
-while index >= 0:
-    reversed_text += text[index]
-    index -= 1
-if reversed_text == text:
-    print("Palindrome")
-else:
-    print("Not a palindrome")    
