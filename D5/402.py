@@ -17,6 +17,11 @@ for index in range(len(values)):
 print(values)
 
 # ------------------------------------------------------------------------------------------------
+# Common mistake:
+# 1. The following will read only one number and repeat it 10 times.
+values = 10 * [int(input('Enter value: '))]
+
+# ------------------------------------------------------------------------------------------------
 # Advanced solutions:
 # In this case it is actually fine to use `append`:
 values = []
@@ -25,8 +30,3 @@ for _ in range(10):
     
 # A shorter way is to use "list comprehension":
 values = [input("Enter text: ") for _ in range(10)]
-
-# ------------------------------------------------------------------------------------------------
-# Common mistake:
-# 1. The following will read only one number and repeat it 10 times.
-values = 10 * [int(input('Enter value: '))]
