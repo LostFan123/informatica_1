@@ -1,19 +1,8 @@
-# 1. Initializing max and min values as zeroes won't work.
-#    Failing examples: [1, 2, 3, ...] and [-1, -2, -3, ...]
-counter = 0
-max_value = 0
-min_value = 0
-while counter < 5:
-    number = float(input("N: "))
-    if number > max_value:
-        max_value = number
-    if number < min_value:
-        min_value = number
-    counter += 1
-print(f"Max: {max_value}")
-print(f"Min: {min_value}")
+# Task:
+#   Write a program that reads a sequence of 20 numbers from keyboard and shows the maximum
+#   and the minimum introduced values.
 
-
+# ------------------------------------------------------------------------------------------------
 # Possible solution - initialize min and max as the first input:
 number = float(input("N: "))
 max_value = number
@@ -56,3 +45,31 @@ while counter < 5:
     counter += 1
 print(f"Min: {min_value}")
 print(f"Max: {max_value}")
+
+# Or using a for-loop if allowed:
+min_value = float('inf')
+max_value = -float('inf')
+for _ in range(5):
+    number = float(input("N: "))
+    min_value = min(number, min_value)
+    max_value = max(number, max_value)
+    counter += 1
+print(f"Min: {min_value}")
+print(f"Max: {max_value}")
+
+# ------------------------------------------------------------------------------------------------
+# Common mistakes:
+# 1. Initializing max and min values as zeroes won't work.
+#    Failing examples: [1, 2, 3, ...] and [-1, -2, -3, ...]
+counter = 0
+max_value = 0
+min_value = 0
+while counter < 5:
+    number = float(input("N: "))
+    if number > max_value:
+        max_value = number
+    if number < min_value:
+        min_value = number
+    counter += 1
+print(f"Max: {max_value}")
+print(f"Min: {min_value}")
