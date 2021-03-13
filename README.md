@@ -2,8 +2,7 @@
 This repository contains the tasks from the deliverables discussed in the class. 
 Possible solutions are shown as well as common mistakes and advanced approaches.
 The advanced solutions are not necessary to understand but are included for those 
-who are interested if there are "better ways" to solve the problems.  
-**These advanced solutions also, most probably, won't be accepted on the exams.**
+who are interested if there are "better ways" to solve the problems. **The advanced solutions, most probably, won't be accepted on the exams.**
 
 ## Do’s and Don’ts
 🟢 Use Python 3 instead of Python 2. Python 2 reached its end of life in 2020 and won't be supported anymore.
