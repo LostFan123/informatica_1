@@ -42,46 +42,7 @@ while True:
     elif op == '/':
         result = a / b
     print(f"{a} {op} {b} = {result}")
-	
-# ------------------------------------------------------------------------------------------------
-# Advanced solutions:
 
-# Comparing tuples:
-while True:
-    a = float(input("Number 1: "))
-    op = input("Operation: ")
-    b = float(input("Number 2: "))
-    if (a, op, b) == (0, '+', 0):
-        break
-    if op == '+':
-        result = a + b
-    elif op == '-':
-        result = a - b
-    elif op == '*':
-        result = a * b
-    elif op == '/':
-        result = a / b
-    print(f"{a} {op} {b} = {result}")
-	
-# Making a dictionary that will map arithmetic symbols to functions performing the corresponding operations.
-# The `operator` library contains several functions that can be used if we want to write arithmetic operations using function calls.
-# So, for example, `operator.add(1, 2)` is equivalent to `1 + 2`.
-# For dictionaries see here: https://docs.python.org/3/tutorial/datastructures.html#dictionaries
-import operator
-functions_per_symbol = {'+': operator.add,
-                        '-': operator.sub,
-                        '*': operator.mul,
-                        '/': operator.truediv}
-while True:
-    a = float(input("Number 1: "))
-    op = input("Operation: ")
-    b = float(input("Number 2: "))
-    if (a, op, b) == (0, '+', 0):
-        break
-    result = functions_per_symbol[op](a, b)
-    print(f"{a} {op} {b} = {result}")
-
-	
 # ------------------------------------------------------------------------------------------------
 # Common mistakes.
 # 1. Using `if` instead of `elif`.
@@ -129,3 +90,40 @@ while status:
     print(f"The result of the operation is {result}.")
     status = False if result == 0 and operation == '+' else True
 print('Done!')
+	
+# ------------------------------------------------------------------------------------------------
+# Advanced solutions.
+# Comparing tuples.
+while True:
+    a = float(input("Number 1: "))
+    op = input("Operation: ")
+    b = float(input("Number 2: "))
+    if (a, op, b) == (0, '+', 0):
+        break
+    if op == '+':
+        result = a + b
+    elif op == '-':
+        result = a - b
+    elif op == '*':
+        result = a * b
+    elif op == '/':
+        result = a / b
+    print(f"{a} {op} {b} = {result}")
+	
+# Making a dictionary that will map arithmetic symbols to functions performing the corresponding operations.
+# The `operator` library contains several functions that can be used if we want to write arithmetic operations using function calls.
+# So, for example, `operator.add(1, 2)` is equivalent to `1 + 2`.
+# For dictionaries see here: https://docs.python.org/3/tutorial/datastructures.html#dictionaries
+import operator
+functions_per_symbol = {'+': operator.add,
+                        '-': operator.sub,
+                        '*': operator.mul,
+                        '/': operator.truediv}
+while True:
+    a = float(input("Number 1: "))
+    op = input("Operation: ")
+    b = float(input("Number 2: "))
+    if (a, op, b) == (0, '+', 0):
+        break
+    result = functions_per_symbol[op](a, b)
+    print(f"{a} {op} {b} = {result}")
