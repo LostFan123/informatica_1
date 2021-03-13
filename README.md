@@ -66,7 +66,7 @@ print(eval("N: "))  # N: 1 + 2
 ```
 Using `eval` can be also dangerous. It's possible that someone will pass a system call in it that can delete all your files!   
 🔴 [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't repeat yourself). If you see that you have some repeating logic in the code, then, most proably, there is a better way to write it.  
-🔴 Don't check equality of strings by `in`. `in` is meant to be used to check if one string is _contained_ in another, like:
+🔴 Don't check equality of strings by `in`.  Use `==` instead. `in` is meant to be used to check if one string is _contained_ in another, like:
 ```python
 if "abc" in "123abcd":
     print("YES")
@@ -80,10 +80,7 @@ if op == '+':
     result = a + b
 elif op == '-':
     result = a - b
-elif op == '*':
-    result = a * b
-elif op == '/':
-    result = a / b
+...
 ```
 instead of 
 ```python
@@ -94,10 +91,7 @@ if op in '+':
     result = a + b
 elif op in '-':
     result = a - b
-elif op in '*':
-    result = a * b
-elif op in '/':
-    result = a / b
+...
 ```  
 🔴 Don't wrap the code into unnecessary parenthesis. For example, instead of `if (x == 2):` you can just write `if x == 2:`.  
 🔴 Don't check values equality by `is` operator. Use `==` only: 
