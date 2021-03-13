@@ -19,17 +19,6 @@ else:
     print(f"{number} is a prime number")
     
 # ------------------------------------------------------------------------------------------------
-# Advanced solution:
-#   Using for-else loop construct.
-number = int(input("Number: "))
-for divisor in range(2, number // 2 + 1):
-    if number % divisor == 0:
-        print(f"{number} is not a prime number")
-        break
-else:
-    print(f"{number} is a prime number")  # this line will be executed only if the loop was not stopped by `break`
-    
-# ------------------------------------------------------------------------------------------------
 # Common mistakes:
 # 1. We don't need to continue looping if we already found out that the number is not a prime.
 # 2. The choice of the initial divisor as `number - 1` is not optimal. 
@@ -57,3 +46,15 @@ if is_prime:
     print(f"{number} is a prime number.")
 else:
     print(f"{number} is not a prime number.")
+    
+# ------------------------------------------------------------------------------------------------
+# Advanced solution:
+#   Using for-else loop construct.
+number = int(input("Number: "))
+for divisor in range(2, number // 2 + 1):
+    if number % divisor == 0:
+        print(f"{number} is not a prime number")
+        break
+else:
+    print(f"{number} is a prime number")  # this line will be executed only if the loop was not stopped by `break`
+    
