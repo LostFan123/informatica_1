@@ -93,7 +93,7 @@ elif op in '*':
 elif op in '/':
     result = a / b
 ```  
-🔴 Don't wrap the code into unnecessary parenthesis. For example, instead of `if (x == 2):` you can just write `if x == 2:`.
+🔴 Don't wrap the code into unnecessary parenthesis. For example, instead of `if (x == 2):` you can just write `if x == 2:`.  
 🔴 Don't check values equality by `is` operator. Use `==` only: 
 ```python
 x = int(input("N: "))
