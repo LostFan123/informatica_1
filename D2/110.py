@@ -2,7 +2,6 @@
 #   Write a program that reads from keyboard 4 numbers and informs if at least two of them are odd
 
 # ------------------------------------------------------------------------------------------------
-
 # Possible solution - create a counter variable:
 a = int(input("Number 1: "))
 b = int(input("Number 2: "))
@@ -80,7 +79,6 @@ else:
     print("Less than two numbers are odd")
  
 # ------------------------------------------------------------------------------------------------
-
 # Advanced solution:
 #   We can use the built-in `sum` function - https://docs.python.org/3/library/functions.html#sum
 #   where the input argument will be a "generator expression":
