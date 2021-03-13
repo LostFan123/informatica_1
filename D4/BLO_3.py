@@ -30,9 +30,7 @@ while code != 0 and not discount:
     if digit == 5:
         calories += 180
         spinning_discount = True
-    if spinning_discount and calories >= 200:
-        discount = True
-    elif calories >= 350:
+    if spinning_discount and calories >= 200 or calories >= 350:
         discount = True
 if discount:
     print('User has won a discount.')
@@ -41,7 +39,7 @@ else:
 
 # ------------------------------------------------------------------------------------------------
 # Advanced solutions:
-#   Using a for-else loop construct with `break` statement:
+# Using a for-else loop construct with `break` statement:
 code = int(input('Input your number: '))
 calories = 0
 spinning_discount = False
@@ -59,13 +57,11 @@ for digit in code:
         spinning_discount = True
     if spinning_discount and calories >= 200 or calories >= 350:
         print('User has won a discount.')
+        break
 else:
     print('User has not won a discount.')
 
-    
-# ------------------------------------------------------------------------------------------------
-# Advanced solution:
-#   Using a dictionary.
+# Using a dictionary.
 kcal_per_digit = {'1': 50, '2': 20, '3': 15, '4': 35, '5': 180}
 code = input("Code: ")
 calories = 0
@@ -74,8 +70,9 @@ for digit in code:
     if digit == 5:
         spinning_discount = True
     calories += kcal_per_digit[digit]
-if spinning_discount and calories >= 200 or calories >= 350:
-    print('User has won a discount.')
+    if spinning_discount and calories >= 200 or calories >= 350:
+        print('User has won a discount.')
+        break
 else:
     print('User has not won a discount.')
     
