@@ -24,29 +24,6 @@ while counter < len(A) and not is_age_found:
 print(KC[counter]))
 
 # ------------------------------------------------------------------------------------------------
-# Advanced solutions:
-# Using for-else loop construct 
-user_age = int(input("Enter your age: "))
-A = [25, 40, 65, 80]
-KC = [120, 110, 105, 100, 90]
-for index, age in enumerate(A):
-    if age > user_age:
-        break
-else:
-    index += 1
-print(KC[index])
-
-# Alternatively using `bisect_right` function.
-# This will search for an index of the first value in a list which is less or equal than the given value.
-# See: https://docs.python.org/3/library/bisect.html#bisect.bisect_left
-from bisect import bisect_right
-age = int(input("Enter your age: "))
-A = [25, 40, 65, 80]
-KC = [120, 110, 105, 100, 90]
-index = bisect_right(A, age)
-print(KC[index])
-    
-# ------------------------------------------------------------------------------------------------
 # Common mistakes:
 # 1. Not the most optimal approach.
 #    It is not extensible - try adding more age ranges and corresponding calories values, and you will have to add more `elif` cases.
@@ -82,3 +59,26 @@ while i6 < 5:
         i6 += 5
     else:
         i6 += 1
+
+# ------------------------------------------------------------------------------------------------
+# Advanced solutions:
+# Using for-else loop construct 
+user_age = int(input("Enter your age: "))
+A = [25, 40, 65, 80]
+KC = [120, 110, 105, 100, 90]
+for index, age in enumerate(A):
+    if age > user_age:
+        break
+else:
+    index += 1
+print(KC[index])
+
+# Alternatively using `bisect_right` function.
+# This will search for an index of the first value in a list which is less or equal than the given value.
+# See: https://docs.python.org/3/library/bisect.html#bisect.bisect_left
+from bisect import bisect_right
+age = int(input("Enter your age: "))
+A = [25, 40, 65, 80]
+KC = [120, 110, 105, 100, 90]
+index = bisect_right(A, age)
+print(KC[index])
