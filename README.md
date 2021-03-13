@@ -4,6 +4,12 @@ Possible solutions are shown as well as common mistakes and advanced approaches.
 The advanced solutions are not necessary to understand but are included for those 
 who are interested if there are "better ways" to solve the problems. **The advanced solutions, most probably, won't be accepted on the exams.**
 
+## Useful links:
+- [Official Python tutorial](https://docs.python.org/3/tutorial/introduction.html)
+- [Style guide for Python code](https://www.python.org/dev/peps/pep-0008/)
+- [Python Tutor - code visualization](http://pythontutor.com/visualize.html)
+- [A nice course for beginners on YouTube](https://www.youtube.com/watch?v=_uQrJ0TkZlc)
+
 ## Do’s and Don’ts
 🟢 Use Python 3 instead of Python 2. Python 2 reached its end of life in 2020 and won't be supported anymore.
 Also, don't mix the syntax of Python 3 and Python 2 together! Python 3 doesn't have `raw_input` but only `input`.
