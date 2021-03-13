@@ -1,21 +1,30 @@
-# 1. Shadowing built-in `sum` function. 
-# 2. The task was calculate the sum of numbers from 1 to N, not a sum of digits of some number.
-n = int(input("Enter a number: "))
-sum = 0
-while n != 0:
-    n2 = n % 10
-    if n2 % 2 == 0 or n2 % 5 == 0:
-        sum = sum + n2
-    n = n // 10
-print("The sum of the even number and multiples of 5 is ", sum)
+# Task:
+#   Calculate the sum of all numbers from 1 to n that are even or multiple of 5. 
 
+# ------------------------------------------------------------------------------------------------
 # Possible solution:
 n = int(input("Enter a number: "))
 result = 0
 counter = 1
 while counter <= n:
     if counter % 2 == 0 or counter % 5 == 0:
-        print(counter)
         result += counter
     counter += 1
 print("Result:", result)
+
+# or if for-loop is allowed:
+n = int(input("Enter a number: "))
+result = 0
+for counter in range(2, n + 1):
+    if counter % 2 == 0 or counter % 5 == 0:
+        result += counter
+print("Result:", result)
+
+# Alternatively, we don't even need to loop. 
+# The following equations can be derived from the sum of arithmetic sequence:
+n = int(input("Enter a number: "))
+even_count = n // 2
+even_sum = even_count * (even_count + 1))  # 2 + 4 + ...
+rest_count = (n + 5) // 10  # divisible by five but not even
+rest_sum = 5 * rest_count * rest_count  # 5 + 15 + 25 + ...
+print("Result:", even_sum + rest_sum)
