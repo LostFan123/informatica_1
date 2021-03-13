@@ -54,6 +54,6 @@ while divisor > 1:
 		is_prime = True  # this will be executed for number == 9 and divisor == 2, which is the divisor of the last iteration
 	divisor = divisor - 1
 if is_prime:
-	print(f"{number} is a prime number.")
+    print(f"{number} is a prime number.")
 else:
-	print(f"{number} is not a prime number.")
+    print(f"{number} is not a prime number.")
