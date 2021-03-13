@@ -2,7 +2,6 @@
 #   Count the space characters (' ') of a sentence contained in vector S. For instance, S=”This
 #   exercises should give a result of 9 white spaces”
 
-
 # ------------------------------------------------------------------------------------------------
 # Possible solution using a while loop:
 text = str(input("Write a sentence: "))
