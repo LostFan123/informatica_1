@@ -3,9 +3,12 @@ This repository contains the tasks from the deliverables discussed in the class.
 Possible solutions are shown as well as common mistakes and advanced approaches.
 The advanced solutions are not necessary to understand but are included for those 
 who are interested if there are "better ways" to solve the problems.  
-These solutions also, most probably, won't be accepted on the exams.
+**These advanced solutions also, most probably, won't be accepted on the exams.**
 
 ## Do’s and Don’ts
+🟢 Use Python 3 instead of Python 2. Python 2 reached its end of life in 2020 and won't be supported anymore.
+Also, don't mix the syntax of Python 3 and Python 2 together! Python 3 doesn't have `raw_input` but only `input`.
+And the `print` is a function in Python 3, so you need to add parenthesis to call it: `print("Hello world!")`.  
 🟢 Use meaningful names of the variables. It's much easier to read a code like this:
 ```python
 total_minutes = int(input("Number of minutes: "))
@@ -57,4 +60,38 @@ print(eval("N: "))  # N: 1 + 2
 # 3
 ```
 Using `eval` can be also dangerous. It's possible that someone will pass a system call in it that can delete all your files!   
-🔴 [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't repeat yourself). If you see that you have some repeating logic in the code, then, most proably, there is a better way to write it.
+🔴 [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't repeat yourself). If you see that you have some repeating logic in the code, then, most proably, there is a better way to write it.  
+🔴 Don't check equality of strings by `in`. `in` is meant to be used to check if one string is _contained_ in another, like:
+```python
+if "abc" in "123abcd":
+    print("YES")
+```
+So, for example, write it like this:
+```python
+a = float(input("Enter the first number: "))
+op = input("Enter an operation (+-*/)")
+b = float(input("Enter the second number: "))
+if op == '+':
+    result = a + b
+elif op == '-':
+    result = a - b
+elif op == '*':
+    result = a * b
+elif op == '/':
+    result = a / b
+```
+instead of 
+```python
+a = float(input("Enter the first number: "))
+op = input("Enter an operation (+-*/)")
+b = float(input("Enter the second number: "))
+if op in '+':
+    result = a + b
+elif op in '-':
+    result = a - b
+elif op in '*':
+    result = a * b
+elif op in '/':
+    result = a / b
+```  
+🔴 Don't wrap the code into unnecessary parenthesis. For example, instead of `if (x == 2):` you can just write `if x == 2:`.
