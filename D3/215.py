@@ -44,18 +44,6 @@ for number in range(1, 101):
     print(result)
     
 # ------------------------------------------------------------------------------------------------
-# Advanced solution:
-#   Using the fact that `A or B` where `A` and `B` are not necessarily booleans, will return the first
-#   true-like value, where false-like (or falsy) values are 0, 0.0, [], ''.
-for number in range(1, 101):
-    result = ''
-    if number % 3 == 0:
-        result += "Fizz"
-    if number % 5 == 0:
-        result += "Buzz"
-    print(result or number)
-    
-# ------------------------------------------------------------------------------------------------
 # Common mistakes:
 # 1. Using several if's instead of if-elif will make it check the same number several times
 counter = 1
@@ -85,3 +73,15 @@ while counter < 101:
     else:
         print(counter)
         counter += 1
+        
+# ------------------------------------------------------------------------------------------------
+# Advanced solution:
+#   Using the fact that `A or B` where `A` and `B` are not necessarily booleans, will return the first
+#   true-like value, where false-like (or falsy) values are 0, 0.0, [], ''.
+for number in range(1, 101):
+    result = ''
+    if number % 3 == 0:
+        result += "Fizz"
+    if number % 5 == 0:
+        result += "Buzz"
+    print(result or number)
