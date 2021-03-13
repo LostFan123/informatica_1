@@ -5,14 +5,12 @@
 #   Formula is: Celsius = ( Fahrenheit - 32 ) * 5/9
 
 # ------------------------------------------------------------------------------------------------
-
 # Solution:
 fahrenheit = float(input("Temperature in Fahrenheit: "))
 celsius = (fahrenheit - 32) * 5 / 9
 print(celsius)
 
 # ------------------------------------------------------------------------------------------------
-
 # Advanced solution:
 #   The solution above will print `26.666666666666668` for input 80.
 #   If we actually need to truncate it and print it as `26.6 Celsius degrees`,
