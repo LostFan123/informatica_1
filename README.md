@@ -94,3 +94,10 @@ elif op in '/':
     result = a / b
 ```  
 🔴 Don't wrap the code into unnecessary parenthesis. For example, instead of `if (x == 2):` you can just write `if x == 2:`.
+🔴 Don't check values equality by `is` operator. Use `==` only: 
+```python
+x = int(input("N: "))
+if x == 0:  # not `if x is 0:`
+    print("x is zero")
+```
+For the discussion on the differences of `==` and `is` see, for example, [Is there a difference between “==” and “is”?](https://stackoverflow.com/q/132988/7851470).
