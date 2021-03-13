@@ -2,7 +2,7 @@
 This repository contains the tasks from the deliverables discussed in the class. 
 Possible solutions are shown as well as common mistakes and advanced approaches.
 The advanced solutions are not necessary to understand but are included for those 
-who are interested if there are "better ways" to solve the problems. **The advanced solutions, most probably, won't be accepted on the exams.**
+who are interested if there are "better ways" to solve the problems. **The advanced solutions, most probably, won't be accepted on the exams, though ;)**
 
 ## Useful links:
 - [Official Python tutorial](https://docs.python.org/3/tutorial/introduction.html)
