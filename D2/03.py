@@ -3,7 +3,6 @@
 #   days, hours and minutes it corresponds. For example, 4565 minutes correspond to 3d, 4h, 5'.
 
 # ------------------------------------------------------------------------------------------------
-
 # Possible solution:
 total_minutes = int(input("Enter minutes: "))
 hours = total_minutes // 60
@@ -23,7 +22,6 @@ days, hours = divmod(hours, 24)
 print(f"{total_minutes} minutes correspond to {days}d, {hours}h, {minutes}'")
 
 # ------------------------------------------------------------------------------------------------
-
 # Common mistakes:
 # 1. Operating on floats will cause issues with precision. 
 #    Failing example: 27
