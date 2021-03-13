@@ -19,13 +19,6 @@ for index in range(len(values)):
 print(values)
 
 # ------------------------------------------------------------------------------------------------
-# Advanced solution
-# Using list comprehension with conditional expression:
-values = [12, 3, 4, 65, 23, 81, 43, 9]
-values = [value if value % 3 != 0 else 0 for value in values]
-print(values)
-
-# ------------------------------------------------------------------------------------------------
 # Common mistakes:
 # 1. Using list.index() inside a loop is not optimal 
 #    since under the hood it will perform unnecessary search for the value:
@@ -42,3 +35,9 @@ for value in values:
        value = 0
    print(value)
 
+# ------------------------------------------------------------------------------------------------
+# Advanced solution
+# Using list comprehension with conditional expression:
+values = [12, 3, 4, 65, 23, 81, 43, 9]
+values = [value if value % 3 != 0 else 0 for value in values]
+print(values)
