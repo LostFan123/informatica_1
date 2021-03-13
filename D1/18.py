@@ -4,7 +4,6 @@
 #   met.
 
 # ------------------------------------------------------------------------------------------------
-
 # Solution:
 number = int(input("Enter a number: "))
 if number % 3 == 0 and number % 5 == 0:
@@ -24,7 +23,6 @@ number = int(input("Enter a number: "))
 print("YES" if number % 15 == 0 else "NO")
 
 # ------------------------------------------------------------------------------------------------
-
 # Advanced solution:
 #   `if` can actually accept not only boolean values (`True` and `False`), but any values at all.
 #   See Python docs on truth value testing: https://docs.python.org/3/library/stdtypes.html#truth-value-testing
@@ -34,7 +32,6 @@ print("NO" if number % 15 else "YES")
 
 
 # ------------------------------------------------------------------------------------------------
-
 # Common mistakes:
 # 1. Writing the code that makes sense in English language, but doesn't make sense in terms of logic of programming language
 #    Failing example: 15
