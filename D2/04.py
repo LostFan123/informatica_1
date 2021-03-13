@@ -4,7 +4,6 @@
 #   (3, 5) and (6,1), the programs responds with value 5
 
 # ------------------------------------------------------------------------------------------------
-
 # Possible solution
 x1 = float(input("x1: "))
 y1 = float(input("y1: "))
@@ -23,7 +22,6 @@ distance = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
 print(distance)
 
 # ------------------------------------------------------------------------------------------------
-
 # Advanced solution: 
 #   One can use `math.dist` function. 
 #   See: https://docs.python.org/3/library/math.html#math.dist
