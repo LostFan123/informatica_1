@@ -14,7 +14,7 @@ age_counts = [0] * len(age_limits)
 for age in A:
     found = False
     i = 0
-    while i >= 0 and not found:
+    while not found:
         if age >= age_limits[i]:
             age_counts[-i - 1] += 1
             found = True
