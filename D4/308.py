@@ -29,5 +29,3 @@ if are_all_even:
     print("All numbers are even")
 else:
     print("Not all numbers are even")
-
-
