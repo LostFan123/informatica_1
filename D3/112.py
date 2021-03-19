@@ -25,23 +25,6 @@ while a != 0 or op != '+' or b != 0:  # same as `while not (a == 0 and op == '+'
     a = float(input("Number 1: "))
     op = input("Operation: ")
     b = float(input("Number 2: "))
-	
-# or using `while True` with break:
-while True:
-    a = float(input("Number 1: "))
-    op = input("Operation: ")
-    b = float(input("Number 2: "))
-    if a == 0 and op == '+' and b == 0:
-        break
-    if op == '+':
-        result = a + b
-    elif op == '-':
-        result = a - b
-    elif op == '*':
-        result = a * b
-    elif op == '/':
-        result = a / b
-    print(f"{a} {op} {b} = {result}")
 
 # ------------------------------------------------------------------------------------------------
 # Common mistakes.
@@ -93,7 +76,24 @@ print('Done!')
 	
 # ------------------------------------------------------------------------------------------------
 # Advanced solutions.
-# Comparing tuples.
+# Using `while True` with break:
+while True:
+    a = float(input("Number 1: "))
+    op = input("Operation: ")
+    b = float(input("Number 2: "))
+    if a == 0 and op == '+' and b == 0:
+        break
+    if op == '+':
+        result = a + b
+    elif op == '-':
+        result = a - b
+    elif op == '*':
+        result = a * b
+    elif op == '/':
+        result = a / b
+    print(f"{a} {op} {b} = {result}")
+
+# Comparing tuples:
 while True:
     a = float(input("Number 1: "))
     op = input("Operation: ")
