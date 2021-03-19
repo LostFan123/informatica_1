@@ -48,6 +48,29 @@ else:
 ```
 By checking it on examples like: 1, 4, 100, 400 we can easily see that the code doesn't produce the expected result.  
 🟢 If you don't understand what some code does, you can either 1) add `print`s on every line and print what the variables contain. This can give a rough idea of what is going on in the code. 2) If you are using an IDE (like PyCharm, Spyder, etc.) you can use a [debugger](https://www.jetbrains.com/help/pycharm/part-1-debugging-python-code.html#start-debugger-session) instead. This is a cleaner way. 3) Paste the code into [Python Tutor](http://pythontutor.com/visualize.html).  
+🔴 Don't use (at least until the first exam) the `break` statement. So, for example, instead of writing
+```python
+some_list = [4, 8, 15, 16, 23, 42]
+i = 0
+while i < len(some_list):
+    if some_list[i] % 5 == 0:
+        print("There is at least one number that is divisible by 5")
+        break
+    i += 1
+```
+write:
+```python
+some_list = [4, 8, 15, 16, 23, 42]
+i = 0
+found = False
+while i < len(some_list) and not found:
+    if some_list[i] % 5 == 0:
+        found = True
+    i += 1
+if found:
+    print("There is at least one number that is divisible by 5")
+```
+This is a requirement from the course creators and it doesn't mean that using `break` is bad. In fact, `break` is used much more frequently in everyday life than the equivalent code with conditions put after `while`.
 🔴 Don't use (at least until the first exam) functionality of the language that treats lists as arrays with the dynamically changed size.  
 Yeah.. I know. That seems unfair. But the motivation of the creators of the course is to teach you first about fixed-size arrays.
 So, for example, you cannot use: `list.append`, `list.extend`, `list.pop`, `list.remove`. And, most probably, you won't be allowed to concatenate strings inside a loop as well. So, the following won't be allowed:
