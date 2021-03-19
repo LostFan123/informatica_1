@@ -15,7 +15,9 @@ if are_all_even:
 else:
     print("Not all numbers are even")
 
-# or using `while True` with `break`:
+# ------------------------------------------------------------------------------------------------
+# Advanced solution.
+# Using `while True` with `break`:
 are_all_even = True
 while True:
     number = int(input("N: "))
