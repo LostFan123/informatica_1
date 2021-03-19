@@ -24,6 +24,32 @@ plt.bar(xs, age_counts)
 plt.show()
 
 # ----------------------------------------------------------------------------------------------------------
+# Common mistakes:
+# 1. Using multiple if-elif (not really a mistake, but we can avoid unnecessary repetition)
+# 2. Plotting bars one by one in a loop instead of plotting them all at once.
+import matplotlib.pyplot as plt
+A = [15, 18, 32, 7, 55, 27, 81, 44, 34, 61, 29, 33, 72, 51, 48]
+freq = [0] * 5;
+n = 0
+while n < len(A):
+    if A[n] <= 12:
+        freq[0] += 1
+    elif 12 < A[n] <= 18:
+        freq[1] += 1
+    elif 18 < A[n] <= 35:
+        freq[2] += 1
+    elif 35 < A[n] <= 65:
+        freq[3] += 1
+    elif A[n] > 65:
+        freq[4] += 1
+    n += 1
+n = 0
+while n < len(freq):
+    plt.bar(n, freq[n])
+    n += 1
+plt.show()
+
+# ----------------------------------------------------------------------------------------------------------
 # Advanced solution.
 # Using `numpy.histogram` to count values inside the given bins.
 # See https://numpy.org/doc/stable/reference/generated/numpy.histogram.html
