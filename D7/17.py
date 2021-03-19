@@ -13,3 +13,17 @@ if a == b + c or b == a + c or c == a + b:
     print("Condition is met")
 else:
     print("Condition is not met")
+    
+# Common mistake:
+# Repeating yourself:
+a = float(input("Number 1: "))
+b = float(input("Number 2: "))
+c = float(input("Number 3: "))
+if  a == b + c:
+   print("Condition is met")
+elif b == a + c:
+   print("Condition is met")
+elif c == a + b:
+   print("Condition is met")
+else:
+   print("Condition is not met")
