@@ -81,6 +81,22 @@ for index in range(5):
 print(text)
 # *****
 ```  
+🔴 Don't use `list.index()` method. This is another requirement for the exam. There is nothing inherintly bad with this method, though.  
+🔴 Do not iterate over digits of a number using its string representation (yet another restriction for the exam). So, code like this won't be allowed:
+```python
+number = input("N: ")
+for digit in number:
+    ...
+```
+Use while loop instead:
+```python
+number = int(input("N: "))
+while number != 0:
+    number, digit = divmod(number, 10)
+    # or 
+    # digit = number % 10
+    # number = number // 10
+```  
 🔴 Don't use `eval`. We already have functions like `int` and `float` that perfectly do the job of conevrting user input to either integers or floats.
 While `eval` is also capable of that, it's actually not the right tool since its purpose, in fact, is to evaluate valid Python expressions.
 ```python
