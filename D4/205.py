@@ -11,7 +11,9 @@ while number != 0:
     digits_count += 1
 print(digits_count)
 
-# Alternatively using `while True:` with `break`:
+# ------------------------------------------------------------------------------------------------
+# Advanced solution.
+# Using `while True:` with `break`:
 number = int(input("Number: "))
 digits_count = 0
 while True:
