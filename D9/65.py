@@ -39,7 +39,7 @@ mean = total / len(numbers)
 numerator = 0
 for number in numbers:
     numerator += (float(number) - mean) ** 2
-stdev = (numerator / len(numbers)) ** 0.5
+stdev = (numerator / (len(numbers) - 1)) ** 0.5
 print(f"Sum: {total}")
 print(f"Mean: {mean}")
 print(f"Standrad deviation: {stdev}")
@@ -56,7 +56,7 @@ with open('numbers.txt') as file:
     numerator = 0
     for number in file:
         numerator += (float(number) - mean) ** 2
-stdev = (numerator / numbers_count) ** 0.5
+stdev = (numerator / (numbers_count - 1)) ** 0.5
 print(f"Sum: {total}")
 print(f"Mean: {mean}")
 print(f"Standrad deviation: {stdev}")
