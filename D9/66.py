@@ -17,7 +17,7 @@ total_payment = 0
 for line in people_file:
     name, hours = line.split(' ')
     salary = price * int(hours)
-    payments_file.write(f"{name} {salary}")
+    payments_file.write(f"{name} {salary}\n")
     people_count += 1
     total_payment += salary
 people_file.close()
@@ -32,7 +32,7 @@ with open("people.txt") as people_file, open("payments.txt", 'w') as payments_fi
     for line in people_file:
         name, hours = line.split(' ')
         salary = price * int(hours)
-        payments_file.write(f"{name} {salary}")
+        payments_file.write(f"{name} {salary}\n")
         people_count += 1
         total_payment += salary
 print(people_count, total_payment)
