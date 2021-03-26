@@ -3,7 +3,7 @@
 #      of them in console. Do not use a vector to do it !
 #   B) Extend your program 1 to calculate and show also the standard deviation. Now, can you do this
 #      without a vector?
-# Note: assuming that numbers are written in the file line by line
+# Note: assuming that 1) numbers are written in the file line by line; 2) input file is never empty
 
 # --------------------------------------------------------------------------------------------------
 # Possible solution for A):
