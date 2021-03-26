@@ -139,4 +139,22 @@ x = int(input("N: "))
 if x == 0:  # not `if x is 0:`
     print("x is zero")
 ```
-For the discussion on the differences of `==` and `is` see, for example, [Is there a difference between “==” and “is”?](https://stackoverflow.com/q/132988/7851470).
+For the discussion on the differences of `==` and `is` see, for example, [Is there a difference between “==” and “is”?](https://stackoverflow.com/q/132988/7851470).  
+🔴 Don't use bare `except` when catching errors. This:
+```python
+number = int(input("N: "))
+while number != 0:
+    try:
+        number = int(input("N: "))
+    except:
+        print("Number should be an integer")
+```
+will catch more than what we want it to catch. For example, if you would want to stop the execution of the program by pressing <kbd>Ctrl</kbd>+<kbd>C</kbd>, it wouldn't work since bare `except` will catch the `KeyboardInterrupt` exception. Instead use specific exceptions, for example, from here: https://docs.python.org/3/library/exceptions.html. In the given example we need to use `ValueError`:
+```python
+number = int(input("N: "))
+while number != 0:
+    try:
+        number = int(input("N: "))
+    except ValueError:
+        print("Number should be an integer")
+```
