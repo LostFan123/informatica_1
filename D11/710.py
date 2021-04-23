@@ -88,7 +88,7 @@ def contar(string: str, letter: str) -> int:
 # C:
 from string import ascii_lowercase
 
-def top_letter(string):
+def top_letter(string: str) -> str:
     count, letter =  max((contar(string, letter), letter) 
                          for letter in ascii_lowercase)
     if count == 0:
